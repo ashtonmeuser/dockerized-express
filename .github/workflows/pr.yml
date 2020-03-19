@@ -1,0 +1,18 @@
+name: Pull Request Deployment
+on: pull_request
+jobs:
+  deploy:
+    name: OpenShift Deployment Using GH Action
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v2
+      - name: Use Pipeline Action
+        uses: bcgov/openshift-launchpad-deployment@custom-script
+        with:
+          MODE: server
+          AUTH_TOKEN: ${{ secrets.AUTH_TOKEN }}
+          NAMESPACE: apdwlc-test
+          APP_NAME: express-pr${{ github.event.number }}
+          BRANCH: ${{ github.event.pull_request.head.ref }}
+          SERVER_PORT: 3000

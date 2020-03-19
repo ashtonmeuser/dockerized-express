@@ -1,0 +1,17 @@
+{
+  "name": "dockerized-express",
+  "version": "1.0.0",
+  "author": "Ashton Meuser",
+  "description": "Simple dockerized express server deployed to OpenShift",
+  "scripts": {
+    "start": "node index.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/ashtonmeuser/dockerized-express.git"
+  },
+  "license": "MIT",
+  "dependencies": {
+    "express": "^4.17.1"
+  }
+}
