@@ -15,4 +15,4 @@ jobs:
           NAMESPACE: apdwlc-test
           APP_NAME: express-pr${{ github.event.number }}
           BRANCH: ${{ github.event.pull_request.head.ref }}
-          SCRIPT: deploy.sh
+          SCRIPT: openshift/scripts/oc_build.sh pr-0
