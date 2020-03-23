@@ -1,7 +1,7 @@
 NAME="${NAME:-express}"
 PROJ_TOOLS="${PROJ_TOOLS:-apdwlc-test}"
 TAG_PROD="${TAG_PROD:-prod}"
-GIT_URL="${GIT_URL:-$REPO}"
+GIT_URL="${GIT_URL:-https://github.com/$GITHUB_REPOSITORY}"
 GIT_BRANCH="${GIT_BRANCH:-$INPUT_BRANCH}"
 PATH_BC="${PATH_BC:-$(dirname ${0})/../templates/build.bc.yaml}"
 PATH_DC="${PATH_DC:-$(dirname ${0})/../templates/deploy.dc.yaml}"
